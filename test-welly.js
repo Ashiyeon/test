@@ -52,40 +52,23 @@ function formatName(firstName, lastName) {
   return formattedName;
 }
 
-console.log(formatName("Ashi", "Weng")); // 預期輸出: Ashi Weng
-console.log(formatName("Ashi", ""));     // 預期輸出: Ashi
-console.log(formatName("", "Weng"));     // 預期輸出:  Weng
-console.log(formatName("", ""));         // 預期輸出: 
+// console.log(formatName("Ashi", "Weng")); // 預期輸出: Ashi Weng
+// console.log(formatName("Ashi", ""));     // 預期輸出: Ashi
+// console.log(formatName("", "Weng"));     // 預期輸出:  Weng
+// console.log(formatName("", ""));         // 預期輸出:
 
 
 function formatName(firstName, lastName) {
-  let formattedName = '';
-  
-  // 如果 firstName 存在，直接賦值給 formattedName
-  if (firstName) {
-    formattedName = firstName;
 
-    // 在內部的條件中，檢查 lastName 是否存在，如果存在則追加到 formattedName 中
-    if (lastName) {
-      formattedName += ' ' + lastName;
-    }
-    
-  } else if (lastName) {
-    // 如果 firstName 不存在但 lastName 存在，則將 lastName 賦值給 formattedName
-    formattedName = lastName;
-  }
+  //使用三元運算子來簡化firstName和lastName的判斷
+  const formattedFirstName = firstName ? firstName : '';
+  const formattedLastName = lastName ? ' ' + lastName : '';
 
-  return formattedName;
+  return formattedFirstName + formattedLastName;
 }
 
 
-console.log(formatName("Ashi", "Weng")); // 預期輸出: Ashi Weng
-console.log(formatName("Ashi", ""));     // 預期輸出: Ashi
-console.log(formatName("", "Weng"));     // 預期輸出: Weng
-console.log(formatName("", ""));         // 預期輸出: 
-
-
-
-
-
-
+// console.log(formatName("Ashi", "Weng")); // 預期輸出: Ashi Weng
+// console.log(formatName("Ashi", ""));     // 預期輸出: Ashi
+// console.log(formatName("", "Weng"));     // 預期輸出:  Weng
+// console.log(formatName("", ""));         // 預期輸出: 
